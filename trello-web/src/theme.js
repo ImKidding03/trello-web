@@ -1,24 +1,30 @@
-import { createTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
+import { cyan, deepOrange, orange } from '@mui/material/colors'
+import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
+import { teal } from '@mui/material/colors'
+
 
 // Create a theme instance.
-const theme = createTheme({
-  cssVariables: true,
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#556cd6',
-    },
-    secondary: {
-      main: '#19857b',
-    },
-    error: {
-      main: red.A400,
-    },
-    text:{
-        secondary: red[500]
-    }
+const theme = extendTheme({
+  trelloCustom: {
+    appBarHeight: '48px',
+    boardBarHeight: '58px'
   },
-});
+  colorSchemes: {
+    light: {
+      palette: {
+        primary: teal,
+        secondary: deepOrange
+      }
+    },
+
+    dark: {
+      palette: {
+        primary: cyan,
+        secondary: orange
+      }
+    }
+  }
+  // ... các tùy chỉnh khác
+})
 
 export default theme
