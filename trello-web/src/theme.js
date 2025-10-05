@@ -23,7 +23,19 @@ const theme = extendTheme({
         secondary: orange
       }
     }
-  }
+  },
+  components: {
+    // Name of the component
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          textTransform: 'capitalize'
+        },
+      },
+    },
+  },
   // ... các tùy chỉnh khác
 })
 
