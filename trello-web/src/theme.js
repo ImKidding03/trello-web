@@ -6,8 +6,8 @@ import { teal } from '@mui/material/colors'
 // Create a theme instance.
 const theme = extendTheme({
   trelloCustom: {
-    appBarHeight: '48px',
-    boardBarHeight: '58px'
+    appBarHeight: '58px',
+    boardBarHeight: '60px'
   },
   colorSchemes: {
     light: {
@@ -23,7 +23,19 @@ const theme = extendTheme({
         secondary: orange
       }
     }
-  }
+  },
+  components: {
+    // Name of the component
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          textTransform: 'capitalize'
+        },
+      },
+    },
+  },
   // ... các tùy chỉnh khác
 })
 
