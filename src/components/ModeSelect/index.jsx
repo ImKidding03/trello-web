@@ -9,20 +9,35 @@ import { useColorScheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 
 function ModeSelect() {
-  const {mode, setMode} = useColorScheme()
+  const { mode, setMode } = useColorScheme()
   const handleChange = (event) => {
     const selected = event.target.value
     setMode(selected);
   };
 
   return (
-    <FormControl size="small">
-      <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
+    <FormControl size="small" sx={{ minWidth: `120px` }}>
+      <InputLabel 
+        id="label-select-dark-light-mode"
+        sx={{ 
+          color: 'white',
+          '&.Mui-focused': { color: 'white' }
+         }}
+        >
+          Modes
+      </InputLabel>
       <Select
         labelId="label-select-dark-light-mode"
         id="select-dark-light-mode"
-        value={mode}
+        value={ mode }
         label="mode"
+        sx={{
+          color: 'white',
+          '.MuiOutlinedInput-notchedOutline':{ borderColor: 'white'},
+          '&:hover .MuiOutlinedInput-notchedOutline':{ borderColor: 'white' },
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline':{ borderColor: 'white' },
+          '.MuiSvgIcon-root': { color: 'white'}
+        }}
         onChange={handleChange}
       >
       

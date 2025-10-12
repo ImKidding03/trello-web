@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import { Box } from '@mui/material'
 
 function Template() {
 
@@ -24,8 +25,9 @@ function Template() {
     }
 
   return (
-    <div>
+    <Box>
       <Button
+        sx={{ color: 'white'}}
         id="basic-button-template"
         aria-controls={open ? 'basic-menu-template' : undefined}
         aria-haspopup="true"
@@ -81,7 +83,7 @@ function Template() {
           <ListItemText>Web Clipboard</ListItemText>
         </MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 }
 

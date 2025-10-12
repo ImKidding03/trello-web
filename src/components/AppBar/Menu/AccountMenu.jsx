@@ -35,8 +35,8 @@ function AccountMenu() {
           >
             <Avatar 
               sx={{
-              width: '28px',
-              height: '28px'
+              width: '34px',
+              height: '34px'
               }}
               alt="mr nhut" 
               src="src/assets/avatar.jpg" />
