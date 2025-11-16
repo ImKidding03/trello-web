@@ -10,6 +10,7 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import Tooltip from '@mui/material/Tooltip'
+import { capitalizeFirstLetter } from '~/utilities/formater'//Hàm tự định nghĩa đc import vào
 
 /* Biến style chung cho menu */
 const menuStyle = {
@@ -24,7 +25,7 @@ const menuStyle = {
 }
 
  
-function BoardBar() {
+function BoardBar({board}) {
   return (
     <Box px={2} sx={{ 
         bgcolor: (theme) => theme.palette.mode === 'dark' ? '#34495e' : '#1976d2',
@@ -34,7 +35,6 @@ function BoardBar() {
         alignItems: 'center',
         justifyContent: 'space-between',
         overflowX: 'auto',
-        borderBottom: '1px solid #1abc9c',
         "&::-webkit-scrollbar-track": { m: 2 }
         }}>
           {/* Board bar left */}
@@ -42,12 +42,12 @@ function BoardBar() {
             {/* Chip 1 */}
             <Chip sx={ menuStyle }
             icon={ <SpaceDashboardIcon/> } 
-            label="Dash Board" clickable />
+            label={board?.title} clickable />
 
             {/* Chip 2 */}
-            <Chip sx={ menuStyle }
+            <Chip sx={ menuStyle}
             icon={ <VpnLockIcon/> } 
-            label="Public/Private Workspace" clickable />
+            label={capitalizeFirstLetter(board?.type)} clickable />
 
             {/* Chip 3 */}
             <Chip sx={ menuStyle }
