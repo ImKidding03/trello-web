@@ -24,7 +24,9 @@ import CloseIcon from '@mui/icons-material/Close'
 
 
 function AppBar() {
+
   const [searchValue, setSearchValue] = useState('')
+
   return (
     <Box px={2} sx={{ 
         bgcolor: (theme) => theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0',
@@ -66,7 +68,6 @@ function AppBar() {
             </Box>
           </Box>
           
-
           {/* App Bar right */}
           <Box sx={{
             display: 'flex',

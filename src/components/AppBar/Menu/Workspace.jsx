@@ -56,6 +56,7 @@ function Workspace() {
             ⌘X
           </Typography>
         </MenuItem>
+
         <MenuItem>
           <ListItemIcon>
             <ContentCopy fontSize="small" />
@@ -65,6 +66,7 @@ function Workspace() {
             ⌘C
           </Typography>
         </MenuItem>
+
         <MenuItem>
           <ListItemIcon>
             <ContentPaste fontSize="small" />
@@ -74,6 +76,7 @@ function Workspace() {
             ⌘V
           </Typography>
         </MenuItem>
+        
         <Divider />
         <MenuItem>
           <ListItemIcon>

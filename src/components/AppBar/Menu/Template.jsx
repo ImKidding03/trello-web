@@ -57,6 +57,7 @@ function Template() {
             ⌘X
           </Typography>
         </MenuItem>
+
         <MenuItem>
           <ListItemIcon>
             <ContentCopy fontSize="small" />
@@ -66,6 +67,7 @@ function Template() {
             ⌘C
           </Typography>
         </MenuItem>
+
         <MenuItem>
           <ListItemIcon>
             <ContentPaste fontSize="small" />
@@ -75,6 +77,7 @@ function Template() {
             ⌘V
           </Typography>
         </MenuItem>
+        
         <Divider />
         <MenuItem>
           <ListItemIcon>

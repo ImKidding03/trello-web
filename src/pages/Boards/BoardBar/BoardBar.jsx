@@ -25,7 +25,7 @@ const menuStyle = {
 }
 
  
-function BoardBar({board}) {
+function BoardBar( { board } ) {
   return (
     <Box px={2} sx={{ 
         bgcolor: (theme) => theme.palette.mode === 'dark' ? '#34495e' : '#1976d2',
@@ -38,6 +38,7 @@ function BoardBar({board}) {
         "&::-webkit-scrollbar-track": { m: 2 }
         }}>
           {/* Board bar left */}
+          {/* Board name, private/public, add to gg drive, automation, filter */}
           <Box sx={{ display: 'flex', alignItems:'center', '& .MuiChip-label': { lineHeight: 'normal'} }}>
             {/* Chip 1 */}
             <Chip sx={ menuStyle }
@@ -45,7 +46,7 @@ function BoardBar({board}) {
             label={board?.title} clickable />
 
             {/* Chip 2 */}
-            <Chip sx={ menuStyle}
+            <Chip sx={ menuStyle}    
             icon={ <VpnLockIcon/> } 
             label={capitalizeFirstLetter(board?.type)} clickable />
 
@@ -66,6 +67,7 @@ function BoardBar({board}) {
           </Box>
 
           {/* Board bar right */}
+          {/* invite, Avatar group */}
           <Box sx={{ display: 'flex', alignItems:'center', gap: 2 }}>
               <Button 
                 variant="outlined" 
@@ -109,7 +111,6 @@ function BoardBar({board}) {
                 <Tooltip title="minh nhut">
                   <Avatar alt="mr nhut" src="src/assets/avatar.jpg" />
                 </Tooltip>
-                
               </AvatarGroup>
           </Box>
       </Box>

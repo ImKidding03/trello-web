@@ -56,6 +56,7 @@ function Recent() {
             ⌘X
           </Typography>
         </MenuItem>
+
         <MenuItem>
           <ListItemIcon>
             <ContentCopy fontSize="small" />
@@ -65,6 +66,7 @@ function Recent() {
             ⌘C
           </Typography>
         </MenuItem>
+
         <MenuItem>
           <ListItemIcon>
             <ContentPaste fontSize="small" />
@@ -74,6 +76,7 @@ function Recent() {
             ⌘V
           </Typography>
         </MenuItem>
+        
         <Divider />
         <MenuItem>
           <ListItemIcon>

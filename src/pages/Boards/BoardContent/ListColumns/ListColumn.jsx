@@ -19,8 +19,8 @@ function ListColumn({ columns }) {
           "&::-webkit-scrollbar-track": { m: 2 },
         }}
       >
-
-        {columns?.map(column=>(<Column key={column._id} column={column}/>))}
+        {/* có thể dùng index khi dữ liệu không có _id */}
+        {columns?.map((column) => (<Column key={column._id} column={column}/>))}
         
         <Box sx={{
           mx: 2,

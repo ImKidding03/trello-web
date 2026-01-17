@@ -76,6 +76,7 @@ function Column({ column }) {
             justifyContent: "space-between",
           }}
         >
+          {/* Tiêu đề column */}
           <Typography
             variant="h6"
             sx={{
